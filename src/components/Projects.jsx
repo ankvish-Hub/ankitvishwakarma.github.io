@@ -29,7 +29,7 @@ const projects = [
       title: "Weather App",
       description: "Developed a responsive weather app that lets users search real-time weather by city name using the OpenWeather API. Designed a clean, mobile-friendly UI with error handling for invalid inputs and optimized components for fast, smooth performance.",
       image: "/assets/weather.png",
-      link: "https://focus-on-today0.netlify.app/"
+      link: "https://weather-web-apppp.netlify.app/"
     }
     
     

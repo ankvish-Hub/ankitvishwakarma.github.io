@@ -98,7 +98,7 @@ export default function Home() {
 
           {/* Social Links */}
           <motion.div
-            className="flex items-center gap-x-5 mt-10 lg:mt-14"
+            className="flex items-center gap-x-9 mt-10 lg:mt-14"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}

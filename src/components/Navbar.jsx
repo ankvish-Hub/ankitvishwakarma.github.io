@@ -94,7 +94,7 @@ export default function Navbar() {
             exit={{ y: "-100%" }}
             transition={{ duration: 0.3 }}
             className="lg:hidden fixed top-0 right-0 h-full w-full 
-              bg-white/30 backdrop-blur-md shadow border-l border-white/40"
+              bg-white backdrop-blur-md shadow border-l border-white"
           >
             <button
               className="absolute top-5 right-5 text-2xl"
@@ -103,9 +103,9 @@ export default function Navbar() {
               <HiX />
             </button>
 
-            <ul className="flex flex-col items-start ml-16 mt-28 h-full gap-y-6 font-semibold">
+            <ul className="flex flex-col items-center ml-30 mt-20  gap-y-4 font-semibold bg-white">
               {["about", "skills", "projects", "certifications", "contact"].map((section) => (
-                <motion.li key={section} className="border-b" whileHover={{ scale: 1.1 }}>
+                <motion.li key={section} className="border-b " whileHover={{ scale: 1.1 }}>
                   <button onClick={() => scrollToSection(section)}>
                     {section.charAt(0).toUpperCase() + section.slice(1)}
                   </button>
