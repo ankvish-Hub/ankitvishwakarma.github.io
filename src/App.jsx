@@ -16,12 +16,10 @@ export default function App() {
       <Navbar />
       <Home />
       <Skills />
-      
       <About />
       <Projects />
       <Certifications />
       <Contact />
-
       <Footer />
     </div>
   )
