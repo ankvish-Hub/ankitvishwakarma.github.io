@@ -1,51 +1,66 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { FaJs, FaReact, FaNodeJs,  FaGithub,  FaMagic, FaTools, FaCode } from "react-icons/fa";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import { CgFigma } from "react-icons/cg";
-import { MdDesignServices } from "react-icons/md";
-import { SiMongodb, SiVercel, SiApollographql, SiFramer, } from "react-icons/si";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaJs, FaReact, FaNodeJs, FaGithub, FaCode, FaHtml5, FaDatabase, FaNetworkWired , FaWindows } from "react-icons/fa";
+import { RiTailwindCssFill,  } from "react-icons/ri";
+import { MdDesignServices, MdApi } from "react-icons/md";
+import { SiMongodb, SiVercel,   SiGithubactions, SiExpress, SiRender, SiPostman } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+
+
+const allSkills = {
+  frontend: [
+    { id: 1,  name: "HTML & CSS",    icon: <FaHtml5 size={32} />,           color: "text-orange-500" },
+    { id: 2,  name: "JavaScript",    icon: <FaJs size={32} />,              color: "text-yellow-400" },
+    { id: 3,  name: "React",         icon: <FaReact size={32} />,           color: "text-cyan-400"   },
+    { id: 4,  name: "Tailwind CSS",  icon: <RiTailwindCssFill size={32} />, color: "text-sky-400"    },
+    { id: 5,  name: "UI Design",  icon: <MdDesignServices size={32} />,  color: "text-pink-500"   },
+    
+  ],
+  backend: [
+    { id: 6, name: "Node.js",      icon: <FaNodeJs size={32} />,   color: "text-green-600" },
+    { id: 7, name: "Express.js",   icon: <SiExpress size={32} />,  color: "text-gray-600"  },
+    { id: 8, name: "MongoDB",      icon: <SiMongodb size={32} />,  color: "text-green-500" },
+    { id: 9, name: "REST APIs",    icon: <MdApi size={32} />,      color: "text-orange-400"},
+  ],
+  tools: [
+    { id: 10, name: "Git & GitHub", icon: <FaGithub size={32} />,        color: "text-black"      },
+    { id: 11, name: "CI/CD",        icon: <SiGithubactions size={32} />, color: "text-red-500"    },
+    { id: 12, name: "Vercel",       icon: <SiVercel size={32} />,        color: "text-black"      },
+    { id: 13, name: "VS Code",      icon: <VscVscode size={32} />,       color: "text-blue-500"   },
+    { id: 14, name: "Render",       icon: <SiRender size={32} />,        color: "text-green-500"  }, 
+    { id: 15, name: "Postman",      icon: <SiPostman size={32} />,       color: "text-orange-500" },
+
+  ],
+  "IT Construct": [
+    { id: 16, name: "DSA",          icon: <FaCode size={32} />,          color: "text-violet-600" },
+    { id: 17, name: "DBMS", icon: <FaDatabase size={32} />,     color: "text-blue-500"   },
+    { id: 18, name: "Computer Networks", icon: <FaNetworkWired size={32} />, color: "text-green-500" },
+    { id: 19, name: "Operating Systems", icon: <FaWindows size={32} />, color: "text-blue-400" },
+  ],
+};
+
+const tabs = [
+  { key: "all",      label: "All" },
+  { key: "frontend", label: "⚡ Frontend" },
+  { key: "backend",  label: "🛠 Backend" },
+  { key: "tools",    label: "🔧 Tools & Others" },
+  { key: "IT Construct", label: "IT Construct" },
+];
+
+const categoryMeta = {
+  frontend: { label: "Frontend",        count: allSkills.frontend.length },
+  backend:  { label: "Backend",         count: allSkills.backend.length  },
+  tools:    { label: "Tools & Others",  count: allSkills.tools.length    },
+  "IT Construct" : { label: "IT Construct", count: allSkills["IT Construct"].length },
+};
 
 export default function Skills() {
-  const [skills] = useState([
-    // { id: 1, name: "HTML & CSS", icon: <FaHtml5 size={36} /> },
-    { id: 2, name: "JavaScript", icon: <FaJs size={36} /> },
-    { id: 3, name: "React", icon: <FaReact size={36} /> },
-    { id: 4, name: "Node.js", icon: <FaNodeJs size={36} /> },
-    { id: 5, name: "MongoDB", icon: <SiMongodb size={36} /> },
-    { id: 7, name: "Next.js", icon: <RiNextjsFill size={36} /> },
-    { id: 8, name: "Tailwind", icon: <RiTailwindCssFill size={36} /> },
-    { id: 9, name: "Figma", icon: <CgFigma size={36} /> },
-    { id: 10, name: "Git & GitHub", icon: <FaGithub size={36} /> },
-    { id: 11, name: "RESTful APIs", icon: <SiApollographql size={36} /> },
-    { id: 13, name: "CI/CD", icon: <FaTools size={36} /> },
-    { id: 12, name: "Vercel", icon: <SiVercel size={36} /> },
-    { id: 14, name: "UI/UX", icon: <MdDesignServices size={36} /> },
-    { id: 15, name: "Prompt Engineering", icon: <FaMagic size={36} /> },
-    { id: 16, name: "Framer Motion", icon: <SiFramer size={36} /> },
-    { id: 17, name: "Data Structures & Algorithms", icon: <FaCode size={36} /> },
-    // { id: 18, name: "TypeScript", icon: <SiTypescript size={36} /> },
-  ]);
-  const [experiences] = useState([
-    {
-      id: 1,
-      company: "Cognifyz Technologies",
-      role: "Frontend Developer",
-      period: "Feb 2025 - March 2025",
-      description:
-        "Built an intuitive weather application that allows users to search for real-time weather information by city name. Developed a responsive weather app that lets users search real-time weather by city name using the OpenWeather API. Designed a clean, mobile-friendly UI with error handling for invalid inputs and optimized components for fast, smooth performance.",
-      logo: "/assets/cognifyz.png",
-    },
-    {
-      id: 2,
-      company: "Prodigy Infotech",
-      role: "Web Developer",
-      period: "Jan 2025 - Feb 2025",
-      description:
-        "Designed and developed fully responsive web pages for multiple projects, integrating UI designs into functional components. Optimized images and minimized unused CSS to improve website load time. Used GitHub for version control and seamless team collaboration.",
-      logo: "/assets/Prodigy-InfoTech.png",
-    },
-  ]);
+  const [activeTab, setActiveTab] = useState("all");
+
+  const visibleSections =
+    activeTab === "all"
+      ? Object.entries(allSkills)
+      : [[activeTab, allSkills[activeTab]]];
 
   return (
     <div className="mt-3 lg:mt-16" id="skills">
@@ -61,72 +76,70 @@ export default function Skills() {
           My <span className="font-extrabold">Skills</span>
         </motion.h2>
 
-        {/* Skill Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 text-lg font-bold mt-7 lg:mt-16 w-full place-items-center gap-y-6 lg:gap-y-12">
-          {skills.map((skill) => (
-            <motion.div
-              key={skill.id}
-              className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-5"
-              initial={{ opacity: 0, y: 5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: skill.id * 0.1 }}
-              viewport={{ once: true }}
+        {/* Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mt-8">
+          {tabs.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setActiveTab(tab.key)}
+              className={`px-5 py-2 rounded-full border-2 text-sm font-semibold transition-all duration-200
+                ${activeTab === tab.key
+                  ? "bg-black text-white border-black"
+                  : "bg-white text-black border-black hover:bg-gray-100"
+                }`}
             >
-              {skill.icon}
-              <p>{skill.name}</p>
-            </motion.div>
+              {tab.label}
+            </button>
           ))}
         </div>
 
-      </div>
+        {/* Skill Sections */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.3 }}
+          >
+            {visibleSections.map(([categoryKey, items]) => (
+              <div key={categoryKey} className="mt-10 lg:mt-14">
+                {/* Category heading — only show in "all" tab */}
+                {activeTab === "all" && (
+                  <div className="flex items-center gap-3 mb-5">
+                    <h3 className="text-base font-bold uppercase tracking-widest text-gray-400">
+                      {categoryMeta[categoryKey].label}
+                    </h3>
+                    <span className="text-xs border border-gray-300 text-gray-400 rounded-full px-2 py-0.5">
+                      {categoryMeta[categoryKey].count}
+                    </span>
+                    <div className="flex-1 h-px bg-gray-200" />
+                  </div>
+                )}
 
-      {/* Experience Section */}
-      <div className="bg-black w-full my-8 py-8 lg:my-16 lg:py-16">
-        <motion.h2
-          className="text-2xl lg:text-4xl text-center text-white"
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          My <span className="font-extrabold">Experience</span>
-        </motion.h2>
-
-        {/* Experience Cards */}
-        <div className="px-5 lg:px-28 my-8 lg:mt-16 space-y-10">
-          {experiences.map((exp, index) => (
-            <motion.div
-              key={exp.id}
-              className="bg-black p-5 border border-[#D4D4D8] rounded-md hover:bg-[#27272A] transition-all cursor-pointer"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 10,
-                delay: index * 0.2,
-              }}
-              viewport={{ once: true }}
-            >
-              <div className="flex justify-between flex-col items-start lg:flex-row lg:items-center">
-                <div className="flex items-center gap-5">
-                  <img className="w-20 h-8 rounded" src={exp.logo} alt="" />
-                  <h2 className="font-semibold text-white text-lg lg:text-xl">
-                    {exp.role} at {exp.company}
-                  </h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5 place-items-center">
+                  {items.map((skill) => (
+                    <motion.div
+                      key={skill.id}
+                      className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-4"
+                      initial={{ opacity: 0, y: 5 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, ease: "easeOut", delay: skill.id * 0.03 }}
+                      viewport={{ once: true }}
+                    >
+                      <span className={skill.color}>{skill.icon}</span>
+                      <p className="text-sm text-center font-bold">{skill.name}</p>
+                    </motion.div>
+                  ))}
                 </div>
-                <span className="text-[#D4D4D8] font-semibold text-sm mt-4 lg:mt-0 lg:text-base">
-                  {exp.period}
-                </span>
               </div>
-              <p className="text-[#D4D4D8] mt-6 text-sm/6 lg:text-base font-light">
-                {exp.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
       </div>
+
+      
     </div>
   );
 }

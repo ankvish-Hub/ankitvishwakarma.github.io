@@ -38,9 +38,7 @@ export default function Home() {
                 sequence={[
                   "I am Ankit Vishwakarma",
                   1000,
-                  "I am a Frontend Developer",
-                  1000,
-                  "I am a UI/UX Designer",
+                  "I am a Full Stack Developer",
                   1000,
                 ]}
                 speed={10}
@@ -49,7 +47,7 @@ export default function Home() {
               />
             </motion.h2>
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              <span className="font-extrabold">Frontend</span>{" "}
+              <span className="font-extrabold">Full Stack</span>{" "}
               <span
                 className="text-white font-extrabold"
                 style={{ WebkitTextStroke: "1px black" }}
@@ -69,7 +67,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            Passionate about technology, I specialize in Frontend and Web Development, creating responsive and user-friendly interfaces. I’m currently learning Backend technologies to become a skilled Full Stack Developer. My focus is on building innovative, high-performance web applications while continuously improving my technical expertise. My goal is to grow as a developer and contribute to impactful projects that make a real difference in the tech industry.
+            Passionate about technology, I specialize in <b>Full Stack Developer</b> who builds fast,
+          scalable, and visually refined web applications. I care deeply about
+          the craft — clean code on the backend, pixel-perfect UI on the
+          frontend.
           </motion.p>
 
           {/* Hire Me + Open to Opportunities */}
