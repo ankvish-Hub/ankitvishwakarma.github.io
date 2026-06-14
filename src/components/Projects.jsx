@@ -7,9 +7,9 @@ const projects = [
     id: 1,
     title: "Pinterest Inspired UI",
     description:
-      "Build an AI-powered Resume Analyzer with React, React Router, and Puter.js! Implement seamless auth, upload and store resumes, and match candidates to jobs using smart AI evaluations. Get custom feedback and ATS scores tailored to each listing—all wrapped in a clean, reusable UI.",
+      "Designed and developed a Pinterest-inspired social media frontend using React.js, Vite, and Tailwind CSS. Implemented responsive design, React Router navigation, authentication pages, and content-focused sections including Home, Create, News, and Business.",
     image: "/assets/Pinterest-UI.png",
-    link: "pinterest-inspired-ui.vercel.app/",
+    link: "https://pinterest-inspired-ui.vercel.app/",
   },
   {
     id: 2,
