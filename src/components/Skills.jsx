@@ -3,8 +3,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaJs, FaReact, FaNodeJs, FaGithub, FaCode, FaHtml5, FaDatabase, FaNetworkWired , FaWindows } from "react-icons/fa";
 import { RiTailwindCssFill,  } from "react-icons/ri";
 import { MdDesignServices, MdApi } from "react-icons/md";
-import { SiMongodb, SiVercel,   SiGithubactions, SiExpress, SiRender, SiPostman } from "react-icons/si";
+import { SiMongodb, SiVercel,   SiGithubactions, SiExpress, SiRender, SiPostman, SiOpenai, SiClaude,  } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+
+
+
 
 
 const allSkills = {
@@ -29,21 +32,24 @@ const allSkills = {
     { id: 13, name: "VS Code",      icon: <VscVscode size={32} />,       color: "text-blue-500"   },
     { id: 14, name: "Render",       icon: <SiRender size={32} />,        color: "text-green-500"  }, 
     { id: 15, name: "Postman",      icon: <SiPostman size={32} />,       color: "text-orange-500" },
+    { id: 16, name: "ChatGPT", icon: <SiOpenai size={32} />, color: "text-green-500" },
+    { id: 17, name: "Claude", icon: <SiClaude size={32} />, color: "text-orange-500" },
+  
 
   ],
   "IT Construct": [
-    { id: 16, name: "DSA",          icon: <FaCode size={32} />,          color: "text-violet-600" },
-    { id: 17, name: "DBMS", icon: <FaDatabase size={32} />,     color: "text-blue-500"   },
-    { id: 18, name: "Computer Networks", icon: <FaNetworkWired size={32} />, color: "text-green-500" },
-    { id: 19, name: "Operating Systems", icon: <FaWindows size={32} />, color: "text-blue-400" },
+    { id: 18, name: "DSA",          icon: <FaCode size={32} />,          color: "text-violet-600" },
+    { id: 19, name: "DBMS", icon: <FaDatabase size={32} />,     color: "text-blue-500"   },
+    { id: 20, name: "Computer Networks", icon: <FaNetworkWired size={32} />, color: "text-green-500" },
+    { id: 21, name: "Operating Systems", icon: <FaWindows size={32} />, color: "text-blue-400" },
   ],
 };
 
 const tabs = [
   { key: "all",      label: "All" },
-  { key: "frontend", label: "⚡ Frontend" },
-  { key: "backend",  label: "🛠 Backend" },
-  { key: "tools",    label: "🔧 Tools & Others" },
+  { key: "frontend", label: " Frontend" },
+  { key: "backend",  label: " Backend" },
+  { key: "tools",    label: " Tools & Others" },
   { key: "IT Construct", label: "IT Construct" },
 ];
 
@@ -121,7 +127,7 @@ export default function Skills() {
                   {items.map((skill) => (
                     <motion.div
                       key={skill.id}
-                      className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded p-3 h-36 w-36 lg:h-44 lg:w-44 flex flex-col items-center justify-center gap-4"
+                      className="bg-white border-2 hover:bg-black hover:text-white transition-all cursor-pointer border-black rounded-lg p-3 h-24 w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 flex flex-col items-center justify-center gap-2"
                       initial={{ opacity: 0, y: 5 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, ease: "easeOut", delay: skill.id * 0.03 }}

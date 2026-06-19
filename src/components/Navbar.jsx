@@ -52,7 +52,7 @@ export default function Navbar() {
         ${hasShadow ? "shadow-md" : "shadow-none"}
         bg-white/30 backdrop-blur-md border-b border-white/40`}
     >
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container mx-auto flex justify-between items-center font-mono">
         
         {/* Logo */}
         <motion.img
