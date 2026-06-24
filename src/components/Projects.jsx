@@ -5,6 +5,14 @@ import { motion } from "framer-motion";
 const projects = [
   {
     id: 1,
+    title: "Full Stack E-Commerce Website",
+    description:
+      "Built a full-stack E-commerce web application with a responsive frontend using React.js, Vite, and Tailwind CSS, and a scalable backend with Node.js, Express.js, and MongoDB. Features include user authentication, product listing, cart management, order placement, and secure online payments via Stripe and Razorpay. Developed a dedicated Admin Panel for managing products, orders, and inventory, with image uploads powered by Cloudinary.",
+    image: "/assets/UrbanWear.png",
+    link: "https://e-commerce-website-frontend-tawny.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Pinterest Inspired UI",
     description:
       "Designed and developed a Pinterest-inspired social media frontend using React.js, Vite, and Tailwind CSS. Implemented responsive design, React Router navigation, authentication pages, and content-focused sections including Home, Create, News, and Business.",
@@ -12,7 +20,7 @@ const projects = [
     link: "https://pinterest-inspired-ui.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "AI-Resume Analyzer",
     description:
       "Build an AI-powered Resume Analyzer with React, React Router, and Puter.js! Implement seamless auth, upload and store resumes, and match candidates to jobs using smart AI evaluations. Get custom feedback and ATS scores tailored to each listing—all wrapped in a clean, reusable UI.",
@@ -20,7 +28,7 @@ const projects = [
     link: "https://ai-resume-analyzerr.vercel.app/",
   },
   {
-    id: 3,
+    id: 4,
     title: "MarketPulse - Stock Market App — Alerts, Charts, AI Insights",
     description:
       "Stock Market app built with Next.js, Shadcn, Better Auth, and Inngest. Track prices, set alerts, explore insights, manage watchlists, and automate workflows for notifications and analytics.",
@@ -28,7 +36,7 @@ const projects = [
     link: "https://market-pulse-stock-tracker-app.vercel.app",
   },
   {
-    id: 4,
+    id: 5,
     title: "Focus On Today",
     description:
       "The app provides a simple and intuitive interface where users can add tasks, mark them as completed. The app is built using HTML, CSS, and Javascript, and it utilizes local storage to persist tasks across sessions.",
@@ -36,7 +44,7 @@ const projects = [
     link: "https://focus-on-today0.netlify.app/",
   },
   {
-    id: 5,
+    id: 6,
     title: "Weather App",
     description:
       "Developed a responsive weather app that lets users search real-time weather by city name using the OpenWeather API. Designed a clean, mobile-friendly UI with error handling for invalid inputs and optimized components for fast, smooth performance.",
