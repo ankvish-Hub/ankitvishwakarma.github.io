@@ -4,6 +4,13 @@ export default function Certifications() {
   const certifications = [
     {
       id: 1,
+      title: "AI & Machine Learning",
+      issuer: "Apna College",
+      // link: "/assets/certificate.webp", 
+      date: "Nov 25 - Present",
+    },
+    {
+      id: 2,
       title: "Namaste JavaScript",
       issuer: "NamasteDev",
       link: "/assets/certificate.webp", 
@@ -11,35 +18,35 @@ export default function Certifications() {
     },
 
     {
-      id: 2,
+      id: 3,
       title: "AWS - Solutions Architecture Job Simulation",
       issuer: "Forage",
       link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_zz3mDT8SJjFMCeL7b_1751981716204_completion_certificate.pdf",
       date: "July 2025",
     },
     {
-      id: 3,
+      id: 4,
       title: "DataCom - Software Development",
       issuer: "Forage",
       link: "https://www.theforage.com/completion-certificates/gCW7Xki5Y3vNpBmnn/L3NcyCoAjLno9d3T9_gCW7Xki5Y3vNpBmnn_zz3mDT8SJjFMCeL7b_1753363895210_completion_certificate.pdf",
       date: "July 2025",
     },
     {
-      id: 4,
+      id: 5,
       title: "SQL (Basic) Certificate",
       issuer: "HackerRank",
       link: "https://www.hackerrank.com/certificates/iframe/56369e0ca5f3",
       date: "Ju1y 2025",
     },
     {
-      id: 5,
+      id: 6,
       title: "Accenture Nordics - Software Engineering Job Simulation",
       issuer: "Forage",
       link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/xhih9yFWsf6AYfngd/HNpZwZcuYwona2d8Y_xhih9yFWsf6AYfngd_zz3mDT8SJjFMCeL7b_1751551067691_completion_certificate.pdf",
       date: "June 2025",
     },
     {
-      id: 6,
+      id: 7,
       title: "Deloitte Australia - Technology  Job Simulation",
       issuer: "Forage",
       link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_zz3mDT8SJjFMCeL7b_1751462292744_completion_certificate.pdf",

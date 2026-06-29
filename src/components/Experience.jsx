@@ -14,7 +14,7 @@ const experiences = [
     id: 2,
     company: "Cognifyz Technologies",
     role: "Frontend Developer Intern",
-    period: "Feb 2026 – Mar 2026",
+    period: "Feb 2025 – Mar 2025",
     description:
       "Built a real-time weather application using the OpenWeather API, featuring city-based search, error handling for invalid inputs, and a clean mobile-responsive UI. Focused on component optimization for smooth performance across devices.",
     logo: "/assets/cognifyz.png",
@@ -23,7 +23,7 @@ const experiences = [
     id: 3,
     company: "Prodigy Infotech",
     role: "Web Developer Intern",
-    period: "Jan 2026 – Feb 2026",
+    period: "Jan 2025 – Feb 2025",
     description:
       "Developed fully responsive web pages by translating UI designs into functional React components. Improved load times by optimizing images and removing unused CSS. Managed codebase and collaborated with the team using Git and GitHub.",
     logo: "/assets/Prodigy-InfoTech.png",
