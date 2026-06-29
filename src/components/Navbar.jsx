@@ -86,7 +86,7 @@ export default function Navbar() {
 
         {/* Resume Button */}
         <motion.a
-          href="/Ankit Vishwakarma.pdf"
+          href="/Ankit_Vishwakarma_Resume.pdf"
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
           target="_blank"
           download
@@ -145,7 +145,7 @@ export default function Navbar() {
 
               {/* Resume Button Mobile */}
               <motion.a
-                href="/Ankit Vishwakarma.pdf"
+                href="/Ankit_Vishwakarma.pdf"
                 className="relative inline-block px-4 py-2 font-semibold group"
                 target="_blank"
                 download
