@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import { IoLogoLinkedin } from "react-icons/io5";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsGithub } from "react-icons/bs";
 import { SiLeetcode } from "react-icons/si";
@@ -107,7 +107,7 @@ export default function Home() {
             {[
               { Icon: BiLogoGmail, href: "https://mail.google.com/mail/u/0/", target: "_blank" },
               { Icon: IoLogoLinkedin, href: "https://www.linkedin.com/in/ankit-vishwakarma-77ab89235/", target: "_blank" },
-              { Icon: IoLogoTwitter, href: "https://x.com/Ankit13201529?t=fLi0QMBj-Z6Z7FOZ4KXNnQ&s=09", target: "_blank" },
+              // { Icon: IoLogoTwitter, href: "https://x.com/Ankit13201529?t=fLi0QMBj-Z6Z7FOZ4KXNnQ&s=09", target: "_blank" },
               { Icon: BsGithub, href: "https://github.com/ankvish-Hub", target: "_blank" },
               { Icon: SiLeetcode, href: "https://leetcode.com/u/_Ankit_Vishwakarma/", target: "_blank" },
             ].map(({ Icon, href, target }, index) => (
